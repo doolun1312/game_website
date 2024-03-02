@@ -1,0 +1,604 @@
+/*Sroll smoothly when going back to the top*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*Background images parameters to make it cover the whole window and be centered*/
+body {
+  background-image: url("../Images/bg1.gif");
+  background-position: center center;
+  background-size: cover;
+  max-height: 100%;
+  position: relative;
+}
+
+/*Styling the header*/
+header {
+  text-decoration: none;
+  background-color: #030010;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: bold;
+  
+}
+
+#myBtn{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:#030010;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  animation: button 0.25s; /*Name of animation is size and duration of animation is 2 seconds*/
+  animation-iteration-count: 1; /*Animation will be played once only*/
+}
+
+/*Positioning the website logo on the left side of the navigation bar*/
+.nav img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-top: auto;
+}
+
+/*When over on elements of the navigation bar, background of the element becomes white and content becomes black*/
+.nav a:hover {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+  }
+
+/*Styling the navigation bar*/
+.menu {
+  text-decoration: none;
+  background-color: #030010;
+  display: inline;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  height: 50px;
+}
+
+/*Styling the content of the navigation bar*/
+.menu a {
+  margin: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+/*Styling of the dropdown*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/*Styling of the dropdown menu */
+.dropdown-content {
+  display:none;
+  position: absolute;
+  background-color:#030010;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+/*Styling of the dropdown menu content*/
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/*When hover on button in dropdown menu, background color becomes white*/
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Changing size of the caroussel and better positioning it*/
+.slideshow {
+  top: 45%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 0%);
+  width: 80%;
+}
+
+
+/*Styling of the login button*/
+.loginbtn {
+  width: auto;
+  height: auto;
+  float: right;
+  top: 0px;
+  cursor: pointer;
+}
+
+/*Aligning text in Play Button*/
+.playbtn {
+  text-align: center;
+}
+
+/*Styling Play Button*/
+.playbtn button {
+  background: #030010;
+  color: white;
+  border-radius: 150px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/*Resizing image in play button*/
+.playbtn button img {
+  height: 100px;
+}
+
+/*Styling the footer*/
+.footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 10%;
+  width: 100%;
+  padding: 10px 10%;
+  background: #030010;
+  color: white;
+  display: flex;
+}
+
+/*Aligning text in footer*/
+.footer div {
+  text-align: center;
+}
+.part2 {
+  flex-grow: 2;
+}
+
+.part1 a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.part1 a:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #030010;
+  border-radius: 30px;
+  padding: 1px 1px;
+}
+
+/*Styling input area of form in footer*/
+.part2 form input {
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  outline: none;
+  border: none;
+  color: #030010;
+}
+
+.part2 form button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.part2 form button:hover {
+  background: white;
+  color: #030010;
+}
+
+.socials {
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.socials i {
+  display: flex;
+  justify-content: space-around;
+  font-size: 22px;
+  margin: 10px;
+}
+
+
+/*Styling content of multiple classes in multiple pages with the same layout*/
+.aboutus,
+.game,
+.game1,
+.howtoplay,
+.login,
+.signup,
+.option,
+.privacy,
+.terms,
+.leaderboard {
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  position: relative;
+  top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  padding: auto;
+}
+
+/*Aligning how to play page well with the footer*/
+.content {
+  height: 80vh;
+}
+
+/*Positioning of all content in the classes below*/
+.aboutus *,
+.game *,
+.content *,
+.login *,
+.signup *,
+.option *,
+.privacy *,
+.terms *,
+.leaderboard * {
+  position: relative;
+}
+
+
+/*Styling the background of the content with opacity and adjusting size*/
+.aboutus .background,
+.game .background,
+.content .background,
+.login .background,
+.signup .background,
+.option .background,
+.privacy .background,
+.leaderboard .background {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  opacity: 0.1;
+  background-color: white;
+}
+
+/*Changing color of input text*/
+.login input, .signup input {
+    color: #030010;
+  }
+
+/*Adding a scrollbar to terms of use and privacy policy classes so that user can scroll down to see more content*/
+.terms,
+.privacy {
+  overflow-y: auto;
+  overflow-y: unset;
+  overflow-x: hidden;
+  scroll-behavior: auto;
+}
+
+/*Resizing backgroung of terms class in terms of use page to better accomodate the content */
+.terms .background {
+  position: absolute;
+  width: 500px;
+  height: 600px;
+  opacity: 0.1;
+  background-color: white;
+}
+
+
+/*Resizing backgroung of privacy class in Privacy policy page to better accomodate the content */
+.privacy .background {
+  position: absolute;
+  width: 500px;
+  height: 1100px;
+  opacity: 0.1;
+  background-color: white;
+}
+
+/*Resizing and positioning image in classes below*/
+.aboutus img,
+.game img,
+.content img,
+.login img,
+.signup img,
+.privacy img,
+.terms img,
+.leaderboard img {
+  width: 120px;
+  height: 120px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Styling the buttons*/
+.aboutus button,
+.login button,
+.signup button,
+.option button,
+.privacy button,
+.terms button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/*Hover on button styling*/
+.aboutus button:hover,
+.login button:hover,
+.signup button:hover,
+.option button:hover,
+.privacy button:hover,
+.terms button:hover {
+  background: white;
+  color: #030010;
+}
+
+/*styling image and adding animation*/
+#icon img {
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: size 2s; /*Name of animation is size and duration of animation is 2 seconds*/
+  animation-iteration-count: 1; /*Animation will be played once only*/
+}
+
+/*Keyframes for animation named size as just defined: animation will go from initiale size to final size progressively in 2 seconds*/
+@keyframes size {
+  from { /*Start the animation at initial image size*/
+    height: 200px;
+    width: 200px;
+  }
+  to {/*End animation at size below*/
+    height: 120px;
+    width: 120px;
+  }
+}
+
+/*Resizing font in leaderboard class*/
+.leaderboard {
+  font-size: 20px;
+}
+
+/*Styling image in leaderboard class in leaderboard page and adding animation*/
+.leaderboard #icon img {
+  width: 180px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: leaderboardsize 2s; /*Name of animation is leaderboardsize and will be for 2 seconds*/
+  animation-iteration-count: 1; /*Will be played only once*/
+}
+
+@keyframes leaderboardsize { /*Keyframe for animation leaderboardsize: will go from initial size to defined size in 2seconds*/
+  from {
+    height: 250px;
+    width: 250px;
+  }
+  to {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+/*styling of button*/
+.game .submitbtn button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/*Hover on button styling*/
+.game .submitbtn button:hover {
+  background: white;
+  color: #030010;
+}
+
+/*Styling of plus and minus button in game and how to play pages */
+.game .plusbtn button,
+.game1 .minusbtn button {
+  background: white;
+  border: 2px solid white;
+  padding-left: 9px;
+  padding-right: 9px;
+  color: #030010;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  left: 150px;
+}
+
+/*Hover on button styling*/
+.game button:hover {
+  background: transparent;
+  color: white;
+}
+
+/*Adding animation to game class*/
+.game {
+  animation: box 2s; /*Animation name: box, duration is 2 seconds*/
+  animation-iteration-count: 1; /*Will be executed once*/
+}
+
+@keyframes box {/*Keyframe for 'box' animation, to go from an initial position to another fixed position in 2seconds */
+  from {
+    top: 75px;
+    left: -300px;
+  }
+  to {
+    top: 75px;
+    left: 0%;
+  }
+}
+
+/*Styling of game1 class*/
+.content .game1 {
+  width: 500px;
+  top: 75px;
+  height: 500px;
+  text-align: center;
+  position: relative;
+  margin-left: 100px;
+  margin-right: auto;
+  color: white;
+}
+
+/*Styling of how to play class*/
+.content .howtoplay {
+  top: -425px;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: 100px;
+  color: white;
+}
+
+/*Styling of images in game1 and content classes*/
+.game1 img,
+.content img {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+/*Styling of button in game1 class*/
+.game1 .submitbtn button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/*Hover on button styling*/
+.game1 .submitbtn button:hover {
+  background: white;
+  color: #030010;
+}
+
+.content button:hover {
+  background: transparent;
+  color: white;
+}
+
+/*Image sizing*/
+.command img {
+  width: 200px;
+  height: 150px;
+}
+
+/*Adding animation to game1 class*/
+.game1 {
+  animation: box1 2s; /*Name of animation:box1, duration 2seconds*/
+  animation-iteration-count: 1;/*Will be executed once*/
+}
+
+@keyframes box1 { /*Keyframe for box1 animation to move object from a initial position to another fixed one in 2seconds*/
+  from {
+    top: 75px;
+    left: 300px;
+  }
+  to {
+    top: 75px;
+    left: 0%;
+  }
+}
+
+/*Add animation to howtoplay class*/
+.howtoplay {
+  animation: box2 2s; /*Name of animation: box2, duration:2 seconds*/
+  animation-iteration-count: 1;/*Will be executed once*/
+}
+@keyframes box2 {/*Keyframe for 'box2' animation to move object from initial position to another position */
+  from {
+    top: -425px;
+    right: 50px;
+  }
+  to {
+    top: -425px;
+    right: 0%;
+  }
+}
+
+/*Styiling of links in login and signup classes*/
+.login a,
+.signup a {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+/*Hover on links styling*/
+.login a:hover,
+.signup a:hover {
+  font-weight: bold;
+  color: white;
+}
+
+/*Sizing and positioning image in option class*/
+.option img {
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Adding animation to image*/
+#icon1 img {
+  animation: size1 2s; /*Name of animation: size1, duration: 2seconds*/
+  animation-iteration-count: 1; /*Will be executed once*/
+}
+
+@keyframes size1 {/*Keyframe for 'size1' animation, will resize object from initial size to another predefined one*/
+  from {
+    height: 120px;
+    width: 120px;
+  }
+  to {
+    height: 200px;
+    width: 200px;
+  }
+}
